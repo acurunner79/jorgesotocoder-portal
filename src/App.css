@@ -573,6 +573,39 @@ h1 {
   cursor: not-allowed;
 }
 
+.locked-card-actions {
+  display: grid;
+  width: 100%;
+  gap: 0.55rem;
+}
+
+.route-plan-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  width: 100%;
+  color: var(--amber);
+  background: rgba(241, 178, 75, 0.07);
+  border: 1px solid rgba(241, 178, 75, 0.26);
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.route-plan-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(241, 178, 75, 0.46);
+  background: rgba(241, 178, 75, 0.11);
+}
+
 .status-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

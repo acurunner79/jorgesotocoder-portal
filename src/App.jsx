@@ -30,9 +30,15 @@ function AppCard({ app }) {
           Open App
         </a>
       ) : (
-        <span className="card-link disabled" title="Restricted system">
-          Locked
-        </span>
+        <div className="locked-card-actions">
+          <span className="card-link disabled" title="Restricted system">
+            Locked
+          </span>
+
+          <a className="route-plan-link" href="#routes">
+            View Route Plan
+          </a>
+        </div>
       )}
     </article>
   );
@@ -258,7 +264,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="route-section">
+      <section className="route-section" id="routes">
         <div className="section-heading">
           <span />
           <h2>Route Matrix</h2>
