@@ -780,6 +780,10 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .route-state {
+  justify-items: start;
+  }
+
   .section-heading {
     grid-template-columns: 1fr;
   }
@@ -1285,6 +1289,7 @@ h1 {
 .route-access,
 .route-target,
 .route-connector,
+.route-state,
 .route-status {
   position: relative;
   z-index: 1;
@@ -1357,6 +1362,21 @@ h1 {
   border: 1px solid rgba(241, 178, 75, 0.34);
 }
 
+.route-state {
+  display: grid;
+  justify-items: end;
+  gap: 0.35rem;
+}
+
+.route-state em {
+  color: rgba(242, 234, 220, 0.52);
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* Access tones */
 
 .route-lane.public,
@@ -1410,6 +1430,62 @@ h1 {
   color: var(--red);
   background: rgba(228, 82, 61, 0.11);
   border-color: rgba(228, 82, 61, 0.4);
+}
+
+.route-lane.live {
+  border-left-color: rgba(111, 227, 143, 0.78);
+}
+
+.route-lane.live .route-connector span {
+  background: linear-gradient(90deg, transparent, rgba(111, 227, 143, 0.86), transparent);
+  box-shadow: 0 0 12px rgba(111, 227, 143, 0.45);
+}
+
+.route-lane.live .route-connector i {
+  background: var(--green);
+  box-shadow: 0 0 16px rgba(111, 227, 143, 0.9);
+}
+
+.route-lane.planned,
+.route-lane.future {
+  opacity: 0.88;
+}
+
+.route-lane.planned .route-connector span,
+.route-lane.future .route-connector span {
+  background: linear-gradient(90deg, transparent, rgba(241, 178, 75, 0.7), transparent);
+  box-shadow: 0 0 10px rgba(241, 178, 75, 0.28);
+}
+
+.route-lane.planned .route-connector i,
+.route-lane.future .route-connector i {
+  background: var(--amber);
+  box-shadow: 0 0 14px rgba(241, 178, 75, 0.72);
+}
+
+.route-lane.never-public {
+  opacity: 0.82;
+  border-left-color: rgba(228, 82, 61, 0.88);
+}
+
+.route-lane.never-public::before {
+  background:
+    linear-gradient(90deg, transparent 0 88%, rgba(228, 82, 61, 0.12)),
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 13px,
+      rgba(228, 82, 61, 0.04) 13px 14px
+    );
+}
+
+.route-lane.never-public .route-connector span {
+  background: linear-gradient(90deg, transparent, rgba(228, 82, 61, 0.58), transparent);
+  box-shadow: 0 0 10px rgba(228, 82, 61, 0.32);
+}
+
+.route-lane.never-public .route-connector i {
+  background: var(--red);
+  box-shadow: 0 0 14px rgba(228, 82, 61, 0.75);
 }
 
 /* Old responsive CSS for pill form - will need adjustments for new lane design */

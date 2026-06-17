@@ -99,8 +99,17 @@ function RouteCard({ route }) {
   const accessClass = route.access.toLowerCase().replaceAll(" ", "-");
   const statusClass = route.status.toLowerCase().replaceAll(" ", "-");
 
+  const activationLabel =
+    route.status === "Live"
+      ? "Signal active"
+      : route.status === "Never Public"
+        ? "Internal lock"
+        : route.status === "Future"
+          ? "Queued"
+          : "Activation pending";
+
   return (
-    <article className={`route-lane ${accessClass}`}>
+    <article className={`route-lane ${accessClass} ${statusClass}`}>
       <div className="route-access">
         <span>{route.access}</span>
       </div>
@@ -116,7 +125,10 @@ function RouteCard({ route }) {
         <span />
       </div>
 
-      <strong className={`route-status ${statusClass}`}>{route.status}</strong>
+      <div className="route-state">
+        <strong className={`route-status ${statusClass}`}>{route.status}</strong>
+        <em>{activationLabel}</em>
+      </div>
     </article>
   );
 }
