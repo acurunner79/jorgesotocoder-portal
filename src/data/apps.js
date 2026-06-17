@@ -9,19 +9,19 @@ export const apps = [
     url: "https://home-tracker.jorgesotocoder.com",
     enabled: true,
   },
-    {
+  {
     title: "GitHub",
-    description: "Repositories, code, and technical work.",
+    description: "Repositories, source code, and technical experiments.",
     icon: "⌘",
     iconImage: "",
     tags: ["Public"],
     statusType: "public",
     url: "https://github.com/acurunner79",
     enabled: true,
-    },
+  },
   {
     title: "Portfolio",
-    description: "Projects, skills, and featured work.",
+    description: "Featured projects, skills, and development work.",
     icon: "▣",
     iconImage: "",
     tags: ["Public"],
@@ -31,7 +31,7 @@ export const apps = [
   },
   {
     title: "C-7-4 Core",
-    description: "Personal AI assistant interface.",
+    description: "Private AI assistant system for automation and local tools.",
     icon: "✦",
     iconImage: "",
     tags: ["Restricted", "Coming Soon"],
@@ -41,7 +41,7 @@ export const apps = [
   },
   {
     title: "Home Assistant",
-    description: "Smart home dashboard and controls.",
+    description: "Private smart home dashboard and automation controls.",
     icon: "◉",
     iconImage: "",
     tags: ["Restricted"],

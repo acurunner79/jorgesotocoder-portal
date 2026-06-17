@@ -17,7 +17,7 @@ export const featuredProjects = [
     title: "Home Tracker",
     status: "Live",
     description:
-      "A home project tracking application for materials, images, progress stages, and project organization.",
+      "A home project tracking app for organizing materials, images, progress stages, and project details.",
     link: "https://home-tracker.jorgesotocoder.com",
     linkLabel: "Open Home Tracker",
   },
@@ -25,7 +25,7 @@ export const featuredProjects = [
     title: "Command Portal",
     status: "Live",
     description:
-      "The central landing page for jorgesotocoder.com, built as a public directory for projects and applications.",
+      "The central landing page for jorgesotocoder.com, serving as a launch point for public projects and applications.",
     link: "https://jorgesotocoder.com",
     linkLabel: "View Portal",
   },
@@ -33,7 +33,7 @@ export const featuredProjects = [
     title: "C-7-4 Core",
     status: "In Development",
     description:
-      "A private personal AI assistant system planned around local AI, automation, memory, and voice interaction.",
+      "A private assistant project focused on local AI, automation, memory, voice interaction, and homelab integration.",
     link: "#apps",
     linkLabel: "View App Directory",
   },
@@ -41,7 +41,7 @@ export const featuredProjects = [
     title: "Homelab Systems",
     status: "Private",
     description:
-      "Self-hosted infrastructure running applications, databases, smart home services, media tools, and automation services.",
+      "Self-hosted infrastructure powering databases, applications, smart home services, media tools, and automation.",
     link: "#apps",
     linkLabel: "View Systems",
   },
