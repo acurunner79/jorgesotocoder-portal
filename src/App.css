@@ -917,3 +917,73 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* Phase 2 responsive polish */
+
+@media (min-width: 721px) and (max-width: 1100px) {
+  .app-grid .app-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: min(100%, calc(50% - 0.5rem));
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 2.4rem;
+    padding-bottom: 2.6rem;
+  }
+
+  .hero-insignia {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.9rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.22em;
+    font-size: 0.68rem;
+  }
+
+  .hero-copy {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .top-nav nav a {
+    font-size: 0.78rem;
+  }
+
+  .about-panel,
+  .project-card,
+  .app-card,
+  .status-panel,
+  .contact-card {
+    border-radius: 14px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 0.55rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .site-footer p {
+    max-width: 280px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 0.82rem;
+  }
+
+  .top-nav nav {
+    font-size: 0.74rem;
+  }
+
+  .highlight-grid span {
+    font-size: 0.66rem;
+  }
+}
