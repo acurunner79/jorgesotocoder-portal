@@ -117,6 +117,7 @@ function RouteCard({ route }) {
       <div className="route-target">
         <h3>{route.domain}</h3>
         <p>{route.service}</p>
+        <small>{route.method}</small>
       </div>
 
       <div className="route-connector" aria-hidden="true">
