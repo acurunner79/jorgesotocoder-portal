@@ -66,6 +66,12 @@ export const contactLinks = [
     href: "#apps",
     external: false,
   },
+  {
+    label: "Route Matrix",
+    value: "View planned domains and access levels",
+    href: "#routes",
+    external: false,
+  },
 ];
 
 export const accessLevels = [

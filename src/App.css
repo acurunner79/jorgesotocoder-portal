@@ -936,7 +936,7 @@ h1 {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -965,7 +965,7 @@ h1 {
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -984,6 +984,10 @@ h1 {
   .project-card-header {
     flex-direction: column;
   }
+
+  .contact-grid {
+  grid-template-columns: 1fr;
+}
 }
 
 /* Phase 2 responsive polish */

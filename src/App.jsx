@@ -149,6 +149,7 @@ export default function App() {
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#apps">Apps</a>
+          <a href="#routes">Routes</a>
           <a href="#contact">Contact</a>
         </nav>
 
