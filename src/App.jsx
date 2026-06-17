@@ -1,6 +1,6 @@
 import "./App.css";
 import { apps } from "./data/apps";
-import { contactLinks, featuredProjects, profile } from "./data/site";
+import { accessLevels, contactLinks, featuredProjects, profile } from "./data/site";
 
 function AppCard({ app }) {
   return (
@@ -70,6 +70,15 @@ function ContactCard({ item }) {
       <span>{item.label}</span>
       <strong>{item.value}</strong>
     </a>
+  );
+}
+
+function AccessCard({ item }) {
+  return (
+    <article className={`access-card ${item.tone}`}>
+      <span>{item.label}</span>
+      <p>{item.description}</p>
+    </article>
   );
 }
 
@@ -205,6 +214,20 @@ export default function App() {
         <div className="app-grid">
           {apps.map((app) => (
             <AppCard key={app.title} app={app} />
+          ))}
+        </div>
+      </section>
+
+      <section className="access-section">
+        <div className="section-heading">
+          <span />
+          <h2>Access Model</h2>
+          <span />
+        </div>
+
+        <div className="access-grid">
+          {accessLevels.map((item) => (
+            <AccessCard key={item.label} item={item} />
           ))}
         </div>
       </section>

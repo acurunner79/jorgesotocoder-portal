@@ -67,3 +67,21 @@ export const contactLinks = [
     external: false,
   },
 ];
+
+export const accessLevels = [
+  {
+    label: "Public",
+    description: "Open project or application link.",
+    tone: "public",
+  },
+  {
+    label: "Restricted",
+    description: "Protected system. Access requires approved private routing.",
+    tone: "restricted",
+  },
+  {
+    label: "Internal",
+    description: "Homelab-only service. Not exposed through the public portal.",
+    tone: "internal",
+  },
+];
