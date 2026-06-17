@@ -760,6 +760,27 @@ h1 {
   border-radius: var(--radius);
 }
 
+.highlight-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  max-width: 820px;
+  margin: 1.5rem auto 0;
+}
+
+.highlight-grid span {
+  padding: 0.45rem 0.75rem;
+  color: var(--cyan);
+  background: rgba(121, 231, 242, 0.075);
+  border: 1px solid rgba(121, 231, 242, 0.24);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
 .about-panel {
   max-width: 980px;
   margin: 0 auto;

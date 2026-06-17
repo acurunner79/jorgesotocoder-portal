@@ -3,6 +3,13 @@ export const profile = {
   title: "Developer · Homelab Builder · Automation Tinkerer",
   summary:
     "I build practical tools, self-hosted systems, smart home dashboards, and personal applications that connect software with real-world workflows.",
+  highlights: [
+    "React / Vite applications",
+    "Self-hosted infrastructure",
+    "Home automation systems",
+    "PostgreSQL-backed apps",
+    "AI assistant experiments",
+  ],
 };
 
 export const featuredProjects = [

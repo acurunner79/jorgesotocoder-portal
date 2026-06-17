@@ -167,6 +167,12 @@ export default function App() {
           <h2>{profile.name}</h2>
           <h3>{profile.title}</h3>
           <p>{profile.summary}</p>
+
+          <div className="highlight-grid">
+            {profile.highlights.map((highlight) => (
+              <span key={highlight}>{highlight}</span>
+            ))}
+          </div>
         </div>
       </section>
 
