@@ -524,6 +524,12 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.tag.planned {
+  color: var(--amber);
+  background: rgba(241, 178, 75, 0.11);
+  border-color: rgba(241, 178, 75, 0.4);
+}
+
 .tag.online {
   color: var(--green);
   background: rgba(111, 227, 143, 0.1);
@@ -549,13 +555,14 @@ h1 {
 }
 
 .tag.coming-soon {
-  min-width: 112px;
-}
-
-.tag.coming-soon {
   color: var(--amber);
   background: rgba(241, 178, 75, 0.11);
   border-color: rgba(241, 178, 75, 0.4);
+}
+
+.tag.coming-soon,
+.tag.planned {
+  min-width: 112px;
 }
 
 .card-link {
@@ -981,13 +988,13 @@ h1 {
 
 /* Phase 2 responsive polish */
 
-@media (min-width: 721px) and (max-width: 1100px) {
+/* @media (min-width: 721px) and (max-width: 1100px) {
   .app-grid .app-card:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     width: min(100%, calc(50% - 0.5rem));
     justify-self: center;
   }
-}
+} */
 
 @media (max-width: 720px) {
   .hero {

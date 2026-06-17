@@ -49,4 +49,14 @@ export const apps = [
     url: "#",
     enabled: false,
   },
+  {
+  title: "Status / Monitoring",
+  description: "Service health, uptime checks, and system availability.",
+  icon: "▤",
+  iconImage: "",
+  tags: ["Restricted", "Planned"],
+  statusType: "restricted",
+  url: "#routes",
+  enabled: false,
+},
 ];
