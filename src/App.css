@@ -1679,3 +1679,62 @@ h1 {
     width: max-content;
   }
 }
+
+.restricted-checklist {
+  margin-top: 1rem;
+  padding: 1rem;
+  background:
+    linear-gradient(90deg, rgba(241, 178, 75, 0.07), transparent 48%),
+    rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(241, 178, 75, 0.22);
+  border-radius: 12px;
+}
+
+.restricted-checklist h3 {
+  margin: 0 0 0.85rem;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.restricted-checklist ul {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.restricted-checklist li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 0.82rem;
+}
+
+.restricted-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.48rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--amber);
+  box-shadow: 0 0 10px rgba(241, 178, 75, 0.7);
+}
+
+@media (max-width: 1100px) {
+  .restricted-checklist ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .restricted-checklist ul {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,6 +7,7 @@ import {
   profile,
   routeMatrix,
   securityDirectives,
+  restrictedChecklist
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -320,6 +321,16 @@ export default function App() {
             {securityDirectives.map((item) => (
               <SecurityDirective key={item.code} item={item} />
             ))}
+          </div>
+
+          <div className="restricted-checklist">
+            <h3>Restricted route checklist</h3>
+
+            <ul>
+              {restrictedChecklist.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

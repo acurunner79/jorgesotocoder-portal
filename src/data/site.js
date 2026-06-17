@@ -151,6 +151,14 @@ export const routeMatrix = [
   },
 ];
 
+export const restrictedChecklist = [
+  "Access gate selected before activation",
+  "HTTPS confirmed on the route",
+  "Private service tested from approved devices",
+  "Admin tools remain internal-only",
+  "Public portal link enabled only after validation",
+];
+
 export const securityDirectives = [
   {
     code: "PUBLIC",
