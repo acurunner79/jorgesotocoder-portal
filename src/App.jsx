@@ -1,15 +1,12 @@
 import "./App.css";
 import { apps } from "./data/apps";
+import { contactLinks, featuredProjects, profile } from "./data/site";
 
 function AppCard({ app }) {
   return (
     <article className={`app-card ${app.statusType}`}>
       <div className="app-icon" aria-hidden="true">
-        {app.iconImage ? (
-          <img src={app.iconImage} alt="" />
-        ) : (
-          <span>{app.icon}</span>
-        )}
+        {app.iconImage ? <img src={app.iconImage} alt="" /> : <span>{app.icon}</span>}
       </div>
 
       <h3>{app.title}</h3>
@@ -38,6 +35,36 @@ function AppCard({ app }) {
         </span>
       )}
     </article>
+  );
+}
+
+function ProjectCard({ project }) {
+  return (
+    <article className="project-card">
+      <div className="project-card-header">
+        <h3>{project.title}</h3>
+        <span>{project.status}</span>
+      </div>
+
+      <p>{project.description}</p>
+
+      <a
+        href={project.link}
+        target={project.link.startsWith("http") ? "_blank" : undefined}
+        rel={project.link.startsWith("http") ? "noreferrer" : undefined}
+      >
+        {project.linkLabel}
+      </a>
+    </article>
+  );
+}
+
+function ContactCard({ item }) {
+  return (
+    <a className="contact-card" href={item.href}>
+      <span>{item.label}</span>
+      <strong>{item.value}</strong>
+    </a>
   );
 }
 
@@ -86,7 +113,7 @@ export default function App() {
         </div>
       </header>
 
-      <section className="hero" id="about">
+      <section className="hero" id="top">
         <div className="hero-overlay" />
 
         <div className="holo-panel left-holo" aria-hidden="true">
@@ -96,15 +123,15 @@ export default function App() {
           <span className="radar-sweep" />
         </div>
 
-       <div className="hero-content">
-        <img
-          className="hero-insignia"
-          src="/assets/icons/rebel-orange.png"
-          alt=""
-          aria-hidden="true"
-        />
+        <div className="hero-content">
+          <img
+            className="hero-insignia"
+            src="/assets/icons/rebel-orange.png"
+            alt=""
+            aria-hidden="true"
+          />
 
-        <p className="eyebrow">Systems Directory // Phase 1</p>
+          <p className="eyebrow">Systems Directory // Phase 2</p>
           <h1>Welcome to the Command Portal</h1>
           <p className="hero-copy">
             A central launch point for projects, applications, and systems across
@@ -128,6 +155,35 @@ export default function App() {
         </div>
       </section>
 
+      <section className="about-section" id="about">
+        <div className="section-heading">
+          <span />
+          <h2>About</h2>
+          <span />
+        </div>
+
+        <div className="about-panel">
+          <p className="eyebrow">Operator Profile</p>
+          <h2>{profile.name}</h2>
+          <h3>{profile.title}</h3>
+          <p>{profile.summary}</p>
+        </div>
+      </section>
+
+      <section className="projects-section" id="projects">
+        <div className="section-heading">
+          <span />
+          <h2>Featured Projects</h2>
+          <span />
+        </div>
+
+        <div className="project-grid">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
       <section className="directory-section" id="apps">
         <div className="section-heading">
           <span />
@@ -142,7 +198,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="status-section" id="projects">
+      <section className="status-section">
         <div className="section-heading">
           <span />
           <h2>System Status</h2>
@@ -173,7 +229,21 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="site-footer" id="contact">
+      <section className="contact-section" id="contact">
+        <div className="section-heading">
+          <span />
+          <h2>Contact / Links</h2>
+          <span />
+        </div>
+
+        <div className="contact-grid">
+          {contactLinks.map((item) => (
+            <ContactCard key={item.label} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <footer className="site-footer">
         <img src="/assets/icons/rebel-orange.png" alt="" aria-hidden="true" />
         <p>jorgesotocoder.com // Rebel-inspired command portal concept</p>
       </footer>
