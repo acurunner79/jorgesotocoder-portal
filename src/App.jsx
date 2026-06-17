@@ -61,7 +61,12 @@ function ProjectCard({ project }) {
 
 function ContactCard({ item }) {
   return (
-    <a className="contact-card" href={item.href}>
+    <a
+      className="contact-card"
+      href={item.href}
+      target={item.external ? "_blank" : undefined}
+      rel={item.external ? "noreferrer" : undefined}
+    >
       <span>{item.label}</span>
       <strong>{item.value}</strong>
     </a>
@@ -238,7 +243,7 @@ export default function App() {
       <section className="contact-section" id="contact">
         <div className="section-heading">
           <span />
-          <h2>Contact / Links</h2>
+          <h2>Command Links</h2>
           <span />
         </div>
 

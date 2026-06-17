@@ -50,17 +50,20 @@ export const featuredProjects = [
 export const contactLinks = [
   {
     label: "GitHub",
-    value: "Repositories and code",
+    value: "View repositories and code",
     href: "https://github.com/acurunner79",
+    external: true,
   },
   {
     label: "Projects",
-    value: "Featured work and applications",
+    value: "Jump to featured work",
     href: "#projects",
+    external: false,
   },
   {
-    label: "Contact",
-    value: "Contact method coming soon",
-    href: "#contact",
+    label: "Applications",
+    value: "Open the app directory",
+    href: "#apps",
+    external: false,
   },
 ];
