@@ -85,3 +85,54 @@ export const accessLevels = [
     tone: "internal",
   },
 ];
+
+export const routeMatrix = [
+  {
+    domain: "jorgesotocoder.com",
+    service: "Command Portal",
+    access: "Public",
+    status: "Live",
+  },
+  {
+    domain: "home-tracker.jorgesotocoder.com",
+    service: "Home Tracker Frontend",
+    access: "Public",
+    status: "Live",
+  },
+  {
+    domain: "api.home-tracker.jorgesotocoder.com",
+    service: "Home Tracker API",
+    access: "Public API",
+    status: "Live",
+  },
+  {
+    domain: "c74.jorgesotocoder.com",
+    service: "C-7-4 Assistant Interface",
+    access: "Restricted",
+    status: "Planned",
+  },
+  {
+    domain: "ha.jorgesotocoder.com",
+    service: "Home Assistant",
+    access: "Restricted",
+    status: "Planned",
+  },
+  {
+    domain: "status.jorgesotocoder.com",
+    service: "Status / Monitoring",
+    access: "Restricted",
+    status: "Planned",
+  },
+  {
+    domain: "media.jorgesotocoder.com",
+    service: "Media Services",
+    access: "Restricted",
+    status: "Future",
+  },
+  {
+    domain: "Unraid / pgAdmin / PostgreSQL",
+    service: "Admin + Database Tools",
+    access: "Internal",
+    status: "Never Public",
+  },
+];

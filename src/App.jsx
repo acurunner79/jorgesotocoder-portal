@@ -1,6 +1,6 @@
 import "./App.css";
 import { apps } from "./data/apps";
-import { accessLevels, contactLinks, featuredProjects, profile } from "./data/site";
+import { accessLevels, contactLinks, featuredProjects, profile, routeMatrix } from "./data/site";
 
 function AppCard({ app }) {
   return (
@@ -78,6 +78,32 @@ function AccessCard({ item }) {
     <article className={`access-card ${item.tone}`}>
       <span>{item.label}</span>
       <p>{item.description}</p>
+    </article>
+  );
+}
+
+function RouteCard({ route }) {
+  const accessClass = route.access.toLowerCase().replaceAll(" ", "-");
+  const statusClass = route.status.toLowerCase().replaceAll(" ", "-");
+
+  return (
+    <article className={`route-lane ${accessClass}`}>
+      <div className="route-access">
+        <span>{route.access}</span>
+      </div>
+
+      <div className="route-target">
+        <h3>{route.domain}</h3>
+        <p>{route.service}</p>
+      </div>
+
+      <div className="route-connector" aria-hidden="true">
+        <span />
+        <i />
+        <span />
+      </div>
+
+      <strong className={`route-status ${statusClass}`}>{route.status}</strong>
     </article>
   );
 }
@@ -228,6 +254,20 @@ export default function App() {
         <div className="access-grid">
           {accessLevels.map((item) => (
             <AccessCard key={item.label} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <section className="route-section">
+        <div className="section-heading">
+          <span />
+          <h2>Route Matrix</h2>
+          <span />
+        </div>
+
+        <div className="route-lanes">
+          {routeMatrix.map((route) => (
+            <RouteCard key={route.domain} route={route} />
           ))}
         </div>
       </section>
