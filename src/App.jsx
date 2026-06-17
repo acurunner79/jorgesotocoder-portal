@@ -2,12 +2,13 @@ import "./App.css";
 import { apps } from "./data/apps";
 import {
   accessLevels,
+  activationQueue,
   contactLinks,
   featuredProjects,
   profile,
+  restrictedChecklist,
   routeMatrix,
   securityDirectives,
-  restrictedChecklist
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -141,6 +142,24 @@ function SecurityDirective({ item }) {
       <span>{item.code}</span>
       <div>
         <h3>{item.title}</h3>
+        <p>{item.detail}</p>
+      </div>
+    </article>
+  );
+}
+
+function ActivationQueueItem({ item }) {
+  return (
+    <article className="activation-item">
+      <span>{item.order}</span>
+
+      <div>
+        <div className="activation-item-header">
+          <h3>{item.title}</h3>
+          <strong>{item.priority}</strong>
+        </div>
+
+        <p className="activation-route">{item.route}</p>
         <p>{item.detail}</p>
       </div>
     </article>
@@ -331,6 +350,19 @@ export default function App() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        <div className="activation-queue">
+          <div className="activation-queue-header">
+            <p className="eyebrow">Activation Queue</p>
+            <h3>Restricted route rollout order</h3>
+          </div>
+
+          <div className="activation-list">
+            {activationQueue.map((item) => (
+              <ActivationQueueItem key={item.route} item={item} />
+            ))}
           </div>
         </div>
       </section>

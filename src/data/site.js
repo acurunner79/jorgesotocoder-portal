@@ -176,3 +176,34 @@ export const securityDirectives = [
     detail: "Unraid, pgAdmin, PostgreSQL, and admin tools remain off the public portal.",
   },
 ];
+
+export const activationQueue = [
+  {
+    order: "01",
+    title: "Status / Monitoring",
+    route: "status.jorgesotocoder.com",
+    priority: "First",
+    detail: "Establish a safe health and uptime dashboard before activating additional restricted services.",
+  },
+  {
+    order: "02",
+    title: "C-7-4 Core",
+    route: "c74.jorgesotocoder.com",
+    priority: "Second",
+    detail: "Prepare private access for the AI assistant interface after the access gate is selected.",
+  },
+  {
+    order: "03",
+    title: "Home Assistant",
+    route: "ha.jorgesotocoder.com",
+    priority: "Third",
+    detail: "Expose only after authentication, HTTPS, and private access testing are complete.",
+  },
+  {
+    order: "04",
+    title: "Media Services",
+    route: "media.jorgesotocoder.com",
+    priority: "Future",
+    detail: "Keep queued until the private routing model is proven stable.",
+  },
+];
