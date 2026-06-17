@@ -142,3 +142,21 @@ export const routeMatrix = [
     status: "Never Public",
   },
 ];
+
+export const securityDirectives = [
+  {
+    code: "PUBLIC",
+    title: "Public routes",
+    detail: "Open project and application links that are safe for general access.",
+  },
+  {
+    code: "RESTRICTED",
+    title: "Protected routes",
+    detail: "Private systems require approved access control before links are activated.",
+  },
+  {
+    code: "INTERNAL",
+    title: "Internal-only systems",
+    detail: "Unraid, pgAdmin, PostgreSQL, and admin tools remain off the public portal.",
+  },
+];

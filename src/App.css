@@ -1466,3 +1466,119 @@ h1 {
     font-size: 0.82rem;
   }
 }
+
+/*Security Panel */
+.security-panel {
+  max-width: 1220px;
+  margin: 1.25rem auto 0;
+  padding: 1.25rem;
+  background:
+    linear-gradient(145deg, rgba(228, 82, 61, 0.08), transparent 42%),
+    radial-gradient(circle at top, rgba(121, 231, 242, 0.045), transparent 55%),
+    rgba(13, 17, 22, 0.86);
+  border: 1px solid rgba(228, 82, 61, 0.22);
+  border-radius: 14px;
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.security-panel-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.security-panel-header .eyebrow {
+  margin: 0;
+}
+
+.security-panel-header h3 {
+  margin: 0;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.9rem;
+}
+
+.security-directive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.security-directive {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.85rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+}
+
+.security-directive span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  min-width: 92px;
+  padding: 0.25rem 0.65rem;
+  color: var(--amber);
+  background: rgba(241, 178, 75, 0.1);
+  border: 1px solid rgba(241, 178, 75, 0.32);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.security-directive h3 {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+.security-directive p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 1000px) {
+  .security-directive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-panel-header {
+    display: block;
+  }
+
+  .security-panel-header .eyebrow {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .security-panel {
+    padding: 1rem;
+  }
+
+  .security-directive {
+    grid-template-columns: 1fr;
+  }
+
+  .security-directive span {
+    width: max-content;
+  }
+}

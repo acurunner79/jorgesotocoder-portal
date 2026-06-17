@@ -1,6 +1,13 @@
 import "./App.css";
 import { apps } from "./data/apps";
-import { accessLevels, contactLinks, featuredProjects, profile, routeMatrix } from "./data/site";
+import {
+  accessLevels,
+  contactLinks,
+  featuredProjects,
+  profile,
+  routeMatrix,
+  securityDirectives,
+} from "./data/site";
 
 function AppCard({ app }) {
   return (
@@ -110,6 +117,18 @@ function RouteCard({ route }) {
       </div>
 
       <strong className={`route-status ${statusClass}`}>{route.status}</strong>
+    </article>
+  );
+}
+
+function SecurityDirective({ item }) {
+  return (
+    <article className="security-directive">
+      <span>{item.code}</span>
+      <div>
+        <h3>{item.title}</h3>
+        <p>{item.detail}</p>
+      </div>
     </article>
   );
 }
@@ -276,6 +295,19 @@ export default function App() {
           {routeMatrix.map((route) => (
             <RouteCard key={route.domain} route={route} />
           ))}
+        </div>
+
+        <div className="security-panel">
+          <div className="security-panel-header">
+            <p className="eyebrow">Security Directive</p>
+            <h3>Route activation rules</h3>
+          </div>
+
+          <div className="security-directive-grid">
+            {securityDirectives.map((item) => (
+              <SecurityDirective key={item.code} item={item} />
+            ))}
+          </div>
         </div>
       </section>
 
