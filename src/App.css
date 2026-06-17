@@ -571,6 +571,8 @@ h1 {
   border: 1px solid rgba(121, 231, 242, 0.28);
   background: rgba(121, 231, 242, 0.05);
   color: var(--cyan);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .card-link.disabled {

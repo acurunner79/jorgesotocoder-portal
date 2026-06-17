@@ -39,7 +39,7 @@ function AppCard({ app }) {
       ) : (
         <div className="locked-card-actions">
           <span className="card-link disabled" title="Restricted system">
-            Locked
+            {app.lockedLabel || "Locked"}
           </span>
 
           <a className="route-plan-link" href="#routes">
