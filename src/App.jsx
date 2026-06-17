@@ -353,8 +353,8 @@ export default function App() {
           <StatusPanel
             icon="◆"
             title="Private Systems"
-            dots={["red", "red", "red", "amber", "dim"]}
-            detail="3 Restricted · 2 Planned"
+            dots={["red", "red", "red", "amber", "amber"]}
+            detail="4 Restricted · 1 Future"
           />
 
           <StatusPanel

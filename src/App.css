@@ -388,8 +388,10 @@ h1 {
 
 .app-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .app-card,
@@ -548,6 +550,12 @@ h1 {
   border-color: rgba(228, 82, 61, 0.4);
 }
 
+.tag.future {
+  color: var(--amber);
+  background: rgba(241, 178, 75, 0.11);
+  border-color: rgba(241, 178, 75, 0.4);
+}
+
 .tag.online,
 .tag.public,
 .tag.restricted {
@@ -561,7 +569,8 @@ h1 {
 }
 
 .tag.coming-soon,
-.tag.planned {
+.tag.planned,
+.tag.future {
   min-width: 112px;
 }
 
