@@ -44,7 +44,7 @@ export const contactLinks = [
   {
     label: "GitHub",
     value: "Repositories and code",
-    href: "#github-link-needed",
+    href: "https://github.com/acurunner79",
   },
   {
     label: "Projects",

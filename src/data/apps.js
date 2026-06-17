@@ -9,16 +9,16 @@ export const apps = [
     url: "https://home-tracker.jorgesotocoder.com",
     enabled: true,
   },
-  {
+    {
     title: "GitHub",
     description: "Repositories, code, and technical work.",
     icon: "⌘",
     iconImage: "",
     tags: ["Public"],
     statusType: "public",
-    url: "#github-link-needed",
+    url: "https://github.com/acurunner79",
     enabled: true,
-  },
+    },
   {
     title: "Portfolio",
     description: "Projects, skills, and featured work.",
