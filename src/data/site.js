@@ -122,11 +122,11 @@ export const routeMatrix = [
     method: "Tailscale-only Open WebUI",
   },
   {
-    domain: "ha.jorgesotocoder.com",
+    domain: "home-assistant.jorgesotocoder.com",
     service: "Home Assistant",
     access: "Restricted",
-    status: "Planned",
-    method: "Access Gate Planned",
+    status: "Private Active",
+    method: "Tailscale-only Home Assistant",
   },
   {
     domain: "status.jorgesotocoder.com",
@@ -188,7 +188,7 @@ export const monitoringCoverage = [
   },
   {
     label: "Private Infrastructure",
-    detail: "TheRock and Uptime Kuma are monitored through Tailscale-only access.",
+    detail: "TheRock, Uptime Kuma, C-7-4 Protocol Droid, and Home Assistant are monitored through private access.",
   },
   {
     label: "Alerts",
@@ -214,9 +214,9 @@ export const activationQueue = [
   {
     order: "03",
     title: "Home Assistant",
-    route: "ha.jorgesotocoder.com",
-    priority: "Third",
-    detail: "Expose only after authentication, HTTPS, and private access testing are complete.",
+    route: "Private Tailscale smart home access",
+    priority: "Active",
+    detail: "Home Assistant OS is online through Tailscale, monitored by Uptime Kuma, and not publicly exposed.",
   },
   {
     order: "04",

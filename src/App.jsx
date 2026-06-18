@@ -411,8 +411,8 @@ export default function App() {
           <StatusPanel
             icon="◆"
             title="Private Systems"
-            dots={["green", "green", "green", "red", "amber"]}
-            detail="Monitoring · Protocol Droid Active"
+            dots={["green", "green", "green", "green", "amber"]}
+            detail="Monitoring · Droid · Home Assistant Active"
           />
 
           <StatusPanel
