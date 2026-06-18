@@ -226,3 +226,22 @@ export const activationQueue = [
     detail: "Keep queued until the private routing model is proven stable.",
   },
 ];
+
+export const backupCoverage = [
+  {
+    label: "Home Assistant",
+    detail: "Automatic encrypted backups are stored outside the Home Assistant VM.",
+  },
+  {
+    label: "Recovery Kit",
+    detail: "The emergency recovery kit is saved outside Home Assistant.",
+  },
+  {
+    label: "Private Storage",
+    detail: "Backups are written to a protected private storage target.",
+  },
+  {
+    label: "Restore Runbook",
+    detail: "A documented restore procedure is now tracked for recovery operations.",
+  },
+];

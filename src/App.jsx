@@ -3,6 +3,7 @@ import { apps } from "./data/apps";
 import {
   accessLevels,
   activationQueue,
+  backupCoverage,
   contactLinks,
   featuredProjects,
   monitoringCoverage,
@@ -172,6 +173,15 @@ function ActivationQueueItem({ item }) {
 function MonitoringCoverageItem({ item }) {
   return (
     <article className="monitoring-coverage-item">
+      <span>{item.label}</span>
+      <p>{item.detail}</p>
+    </article>
+  );
+}
+
+function BackupCoverageItem({ item }) {
+  return (
+    <article className="backup-coverage-item">
       <span>{item.label}</span>
       <p>{item.detail}</p>
     </article>
@@ -389,6 +399,20 @@ export default function App() {
         <div className="monitoring-coverage-grid">
           {monitoringCoverage.map((item) => (
             <MonitoringCoverageItem key={item.label} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <section className="backup-coverage-section">
+        <div className="section-heading">
+          <span />
+          <h2>Backup Coverage</h2>
+          <span />
+        </div>
+
+        <div className="backup-coverage-grid">
+          {backupCoverage.map((item) => (
+            <BackupCoverageItem key={item.label} item={item} />
           ))}
         </div>
       </section>
