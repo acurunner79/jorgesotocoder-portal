@@ -177,6 +177,25 @@ export const securityDirectives = [
   },
 ];
 
+export const monitoringCoverage = [
+  {
+    label: "Public Services",
+    detail: "Command Portal and Home Tracker are monitored for availability.",
+  },
+  {
+    label: "Protected API",
+    detail: "Home Tracker API is monitored from public and internal paths.",
+  },
+  {
+    label: "Private Infrastructure",
+    detail: "TheRock and Uptime Kuma are monitored through Tailscale-only access.",
+  },
+  {
+    label: "Alerts",
+    detail: "Email notifications are enabled for service failures.",
+  },
+];
+
 export const activationQueue = [
   {
     order: "01",

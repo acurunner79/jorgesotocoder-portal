@@ -5,6 +5,7 @@ import {
   activationQueue,
   contactLinks,
   featuredProjects,
+  monitoringCoverage,
   profile,
   restrictedChecklist,
   routeMatrix,
@@ -164,6 +165,15 @@ function ActivationQueueItem({ item }) {
         <p className="activation-route">{item.route}</p>
         <p>{item.detail}</p>
       </div>
+    </article>
+  );
+}
+
+function MonitoringCoverageItem({ item }) {
+  return (
+    <article className="monitoring-coverage-item">
+      <span>{item.label}</span>
+      <p>{item.detail}</p>
     </article>
   );
 }
@@ -369,6 +379,20 @@ export default function App() {
         </div>
       </section>
 
+      <section className="monitoring-coverage-section">
+        <div className="section-heading">
+          <span />
+          <h2>Monitoring Coverage</h2>
+          <span />
+        </div>
+
+        <div className="monitoring-coverage-grid">
+          {monitoringCoverage.map((item) => (
+            <MonitoringCoverageItem key={item.label} item={item} />
+          ))}
+        </div>
+      </section>
+
       <section className="status-section">
         <div className="section-heading">
           <span />
@@ -387,8 +411,8 @@ export default function App() {
           <StatusPanel
             icon="◆"
             title="Private Systems"
-            dots={["green", "red", "red", "red", "amber"]}
-            detail="1 Private Active · 3 Restricted · 1 Future"
+            dots={["green", "green", "red", "red", "amber"]}
+            detail="Monitoring Active · Alerts Enabled"
           />
 
           <StatusPanel
