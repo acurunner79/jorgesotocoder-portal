@@ -238,10 +238,10 @@ export const backupCoverage = [
   },
   {
     label: "Private Storage",
-    detail: "Backups are written to a protected private storage target.",
+    detail: "Primary backups are written to protected private storage.",
   },
   {
-    label: "Restore Runbook",
-    detail: "A documented restore procedure is now tracked for recovery operations.",
+    label: "Restore Runbooks",
+    detail: "Multiple recovery procedures are documented for core restore operations.",
   },
 ];
