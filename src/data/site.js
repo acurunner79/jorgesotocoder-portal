@@ -12,6 +12,12 @@ export const profile = {
   ],
 };
 
+export const commandTicker = {
+  label: "Incoming Transmission",
+  phrase:
+    "SYSTEMS NOMINAL · PRIVATE ROUTES SECURED · BACKUPS VERIFIED · C-7-4 PROTOCOL DROID ONLINE · HOME ASSISTANT PRIVATE ACTIVE · THE ROCK STANDING BY",
+};
+
 export const featuredProjects = [
   {
     title: "Home Tracker",

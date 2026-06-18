@@ -11,6 +11,7 @@ import {
   restrictedChecklist,
   routeMatrix,
   securityDirectives,
+  commandTicker,
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -208,6 +209,24 @@ function StatusPanel({ icon, title, dots, detail }) {
   );
 }
 
+function CommandTicker({ ticker }) {
+  return (
+    <section className="command-ticker" aria-label="Command ticker">
+      <div className="command-ticker-label">
+        <span className="ticker-dot" />
+        {ticker.label}
+      </div>
+
+      <div className="command-ticker-track">
+        <div className="command-ticker-scroll aurebesh-text">
+          <span>{ticker.phrase}</span>
+          <span aria-hidden="true">{ticker.phrase}</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function App() {
   return (
     <main className="page-shell">
@@ -275,6 +294,8 @@ export default function App() {
           <span className="table-beam" />
         </div>
       </section>
+
+      <CommandTicker ticker={commandTicker} />
 
       <section className="about-section" id="about">
         <div className="section-heading">
