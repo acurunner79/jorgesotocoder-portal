@@ -550,6 +550,12 @@ h1 {
   border-color: rgba(228, 82, 61, 0.4);
 }
 
+.tag.private-active {
+  color: var(--green);
+  background: rgba(111, 227, 143, 0.1);
+  border-color: rgba(111, 227, 143, 0.38);
+}
+
 .tag.future {
   color: var(--amber);
   background: rgba(241, 178, 75, 0.11);
@@ -558,7 +564,8 @@ h1 {
 
 .tag.online,
 .tag.public,
-.tag.restricted {
+.tag.restricted,
+.tag.private-active {
   min-width: 76px;
 }
 
@@ -1396,6 +1403,26 @@ h1 {
   display: grid;
   justify-items: end;
   gap: 0.35rem;
+}
+
+.route-status.private-active {
+  color: var(--green);
+  background: rgba(111, 227, 143, 0.1);
+  border-color: rgba(111, 227, 143, 0.35);
+}
+
+.route-lane.private-active {
+  border-left-color: rgba(111, 227, 143, 0.78);
+}
+
+.route-lane.private-active .route-connector span {
+  background: linear-gradient(90deg, transparent, rgba(111, 227, 143, 0.86), transparent);
+  box-shadow: 0 0 12px rgba(111, 227, 143, 0.45);
+}
+
+.route-lane.private-active .route-connector i {
+  background: var(--green);
+  box-shadow: 0 0 16px rgba(111, 227, 143, 0.9);
 }
 
 .route-state em {

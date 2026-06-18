@@ -53,14 +53,14 @@ export const apps = [
   },
   {
   title: "Status / Monitoring",
-  description: "Service health, uptime checks, and system availability.",
+  description: "Private service health, uptime checks, and system availability.",
   icon: "▤",
   iconImage: "",
-  tags: ["Restricted", "Planned"],
-  lockedLabel: "Route Planned",
+  tags: ["Restricted", "Private Active"],
   statusType: "restricted",
   url: "#routes",
   enabled: false,
+  lockedLabel: "Private Active",
 },
 {
   title: "Media Services",

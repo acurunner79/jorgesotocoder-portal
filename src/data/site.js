@@ -132,9 +132,9 @@ export const routeMatrix = [
     domain: "status.jorgesotocoder.com",
     service: "Status / Monitoring",
     access: "Restricted",
-    status: "Planned",
-    method: "Access Gate Planned",
-  },
+    status: "Private Active",
+    method: "Tailscale-only",
+    },
   {
     domain: "media.jorgesotocoder.com",
     service: "Media Services",
@@ -181,10 +181,10 @@ export const activationQueue = [
   {
     order: "01",
     title: "Status / Monitoring",
-    route: "status.jorgesotocoder.com",
-    priority: "First",
-    detail: "Establish a safe health and uptime dashboard before activating additional restricted services.",
-  },
+    route: "Tailscale private access",
+    priority: "Active",
+    detail: "Uptime Kuma is online through Tailscale and monitoring public, internal, and protected services.",
+    },
   {
     order: "02",
     title: "C-7-4 Core",

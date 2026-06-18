@@ -102,8 +102,10 @@ function RouteCard({ route }) {
   const statusClass = route.status.toLowerCase().replaceAll(" ", "-");
 
   const activationLabel =
-    route.status === "Live"
-      ? "Signal active"
+  route.status === "Live"
+    ? "Signal active"
+    : route.status === "Private Active"
+      ? "Tailnet active"
       : route.status === "Never Public"
         ? "Internal lock"
         : route.status === "Future"
@@ -385,8 +387,8 @@ export default function App() {
           <StatusPanel
             icon="◆"
             title="Private Systems"
-            dots={["red", "red", "red", "amber", "amber"]}
-            detail="4 Restricted · 1 Future"
+            dots={["green", "red", "red", "red", "amber"]}
+            detail="1 Private Active · 3 Restricted · 1 Future"
           />
 
           <StatusPanel
