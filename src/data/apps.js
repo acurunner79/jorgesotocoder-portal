@@ -51,16 +51,16 @@ export const apps = [
     url: "#",
     enabled: false,
   },
-  {
+{
   title: "Status / Monitoring",
-  description: "Private service health, uptime checks, and system availability.",
+  description: "Private uptime dashboard and service health page through Tailscale.",
   icon: "▤",
   iconImage: "",
   tags: ["Restricted", "Private Active"],
   statusType: "restricted",
   url: "#routes",
   enabled: false,
-  lockedLabel: "Private Active",
+  lockedLabel: "Tailnet Active",
 },
 {
   title: "Media Services",

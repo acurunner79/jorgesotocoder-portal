@@ -133,8 +133,8 @@ export const routeMatrix = [
     service: "Status / Monitoring",
     access: "Restricted",
     status: "Private Active",
-    method: "Tailscale-only",
-    },
+    method: "Tailscale-only status page",
+  },
   {
     domain: "media.jorgesotocoder.com",
     service: "Media Services",
@@ -168,7 +168,7 @@ export const securityDirectives = [
   {
     code: "RESTRICTED",
     title: "Protected routes",
-    detail: "Private systems require approved access control before links are activated.",
+    detail: "Private systems require approved access control. Tailscale-only services remain off the public portal.",
   },
   {
     code: "INTERNAL",
@@ -181,10 +181,10 @@ export const activationQueue = [
   {
     order: "01",
     title: "Status / Monitoring",
-    route: "Tailscale private access",
+    route: "Private Tailscale status page",
     priority: "Active",
-    detail: "Uptime Kuma is online through Tailscale and monitoring public, internal, and protected services.",
-    },
+    detail: "Uptime Kuma is online through Tailscale with a private read-only status page and email alerts enabled.",
+  },
   {
     order: "02",
     title: "C-7-4 Core",
