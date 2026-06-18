@@ -53,6 +53,89 @@ export const featuredProjects = [
   },
 ];
 
+export const portalSystemIndex = {
+  eyebrow: "Tactical Overview",
+  title: "Portal System Index",
+  subtitle: "Public-safe command summary of active systems, protected routes, monitoring, and recovery posture.",
+  metrics: [
+    {
+      label: "Public Live",
+      value: "3",
+      detail: "Public-facing systems operational",
+      tone: "green",
+    },
+    {
+      label: "Private Active",
+      value: "4",
+      detail: "Restricted systems active through approved access",
+      tone: "green",
+    },
+    {
+      label: "Monitored",
+      value: "9",
+      detail: "Service checks reporting through monitoring",
+      tone: "blue",
+    },
+    {
+      label: "Recovery Ready",
+      value: "3",
+      detail: "Restore runbooks documented",
+      tone: "amber",
+    },
+  ],
+  systems: [
+    {
+      name: "Command Portal",
+      access: "Public",
+      status: "Live",
+      shield: "Online",
+      tone: "green",
+    },
+    {
+      name: "Home Tracker",
+      access: "Public",
+      status: "Live",
+      shield: "Auth Protected",
+      tone: "green",
+    },
+    {
+      name: "Status / Monitoring",
+      access: "Restricted",
+      status: "Private Active",
+      shield: "Tailnet",
+      tone: "green",
+    },
+    {
+      name: "C-7-4 Protocol Droid",
+      access: "Restricted",
+      status: "Private Active",
+      shield: "Tailnet",
+      tone: "green",
+    },
+    {
+      name: "Home Assistant",
+      access: "Restricted",
+      status: "Private Active",
+      shield: "Tailnet",
+      tone: "green",
+    },
+    {
+      name: "Backup & Recovery Layer",
+      access: "Internal",
+      status: "Protected",
+      shield: "Runbooks Ready",
+      tone: "blue",
+    },
+    {
+      name: "External Second Copy",
+      access: "Pending",
+      status: "Deferred",
+      shield: "Awaiting Drive",
+      tone: "amber",
+    },
+  ],
+};
+
 export const contactLinks = [
   {
     label: "GitHub",

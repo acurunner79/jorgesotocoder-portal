@@ -12,6 +12,7 @@ import {
   routeMatrix,
   securityDirectives,
   commandTicker,
+  portalSystemIndex,
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -88,6 +89,76 @@ function ContactCard({ item }) {
       <span>{item.label}</span>
       <strong>{item.value}</strong>
     </a>
+  );
+}
+
+function SystemIndexMetric({ metric }) {
+  return (
+    <article className={`system-index-metric ${metric.tone}`}>
+      <span>{metric.label}</span>
+      <strong>{metric.value}</strong>
+      <p>{metric.detail}</p>
+    </article>
+  );
+}
+
+function SystemIndexRow({ system }) {
+  return (
+    <article className={`system-index-row ${system.tone}`}>
+      <div className="system-index-name">
+        <span className="system-index-dot" />
+        <strong>{system.name}</strong>
+      </div>
+
+      <span className="system-index-pill">{system.access}</span>
+      <span className="system-index-status">{system.status}</span>
+      <span className="system-index-shield">{system.shield}</span>
+    </article>
+  );
+}
+
+function PortalSystemIndex({ index }) {
+  return (
+    <section className="portal-system-index">
+      <div className="section-heading">
+        <span />
+        <h2>{index.title}</h2>
+        <span />
+      </div>
+
+      <div className="system-index-shell">
+        <div className="system-index-header">
+          <div>
+            <p className="system-index-eyebrow">{index.eyebrow}</p>
+            <h3>{index.title}</h3>
+            <p>{index.subtitle}</p>
+          </div>
+
+          <div className="system-index-stamp">SECURE SUMMARY</div>
+        </div>
+
+        <div className="system-index-metrics">
+          {index.metrics.map((metric) => (
+            <SystemIndexMetric key={metric.label} metric={metric} />
+          ))}
+        </div>
+
+        <div className="system-index-table">
+          <div className="system-index-table-head">
+            <span>System</span>
+            <span>Access</span>
+            <span>Status</span>
+            <span>Shield</span>
+          </div>
+
+          <div className="system-index-rows">
+            {index.systems.map((system) => (
+              <SystemIndexRow key={system.name} system={system} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -296,6 +367,8 @@ export default function App() {
       </section>
 
       <CommandTicker ticker={commandTicker} />
+
+      <PortalSystemIndex index={portalSystemIndex} />
 
       <section className="about-section" id="about">
         <div className="section-heading">
