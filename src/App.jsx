@@ -14,6 +14,7 @@ import {
   commandTicker,
   portalSystemIndex,
   missionLog,
+  nextObjectives,
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -137,6 +138,54 @@ function MissionLog({ log }) {
         <div className="mission-log-timeline">
           {log.entries.map((entry) => (
             <MissionLogEntry key={entry.code} entry={entry} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function NextObjectiveCard({ objective }) {
+  return (
+    <article className={`next-objective-card ${objective.tone}`}>
+      <div className="next-objective-code">{objective.code}</div>
+
+      <div className="next-objective-body">
+        <div className="next-objective-topline">
+          <h3>{objective.title}</h3>
+          <span>{objective.status}</span>
+        </div>
+
+        <p>{objective.detail}</p>
+
+        <div className="next-objective-footer">
+          <span>Priority</span>
+          <strong>{objective.priority}</strong>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function NextObjectives({ objectives }) {
+  return (
+    <section className="next-objectives-section">
+      <div className="section-heading">
+        <span />
+        <h2>{objectives.title}</h2>
+        <span />
+      </div>
+
+      <div className="next-objectives-shell">
+        <div className="next-objectives-header">
+          <p>{objectives.eyebrow}</p>
+          <h3>{objectives.title}</h3>
+          <span>{objectives.subtitle}</span>
+        </div>
+
+        <div className="next-objectives-grid">
+          {objectives.objectives.map((objective) => (
+            <NextObjectiveCard key={objective.code} objective={objective} />
           ))}
         </div>
       </div>
@@ -458,6 +507,8 @@ export default function App() {
       </section>
 
       <MissionLog log={missionLog} />
+
+      <NextObjectives objectives={nextObjectives} />
 
       <section className="directory-section" id="apps">
         <div className="section-heading">

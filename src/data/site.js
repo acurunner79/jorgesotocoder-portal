@@ -83,6 +83,51 @@ export const missionLog = {
   ],
 };
 
+export const nextObjectives = {
+  eyebrow: "Forward Operations",
+  title: "Next Objectives",
+  subtitle:
+    "Planned improvements queued for future command-center expansion.",
+  objectives: [
+    {
+      code: "NX-01",
+      title: "External Backup Second Copy",
+      priority: "High",
+      detail:
+        "Create an offline or off-server backup copy once a suitable external drive is available.",
+      status: "Deferred",
+      tone: "amber",
+    },
+    {
+      code: "NX-02",
+      title: "Home Assistant Dashboard Expansion",
+      priority: "Medium",
+      detail:
+        "Continue expanding smart home controls, camera operations, and themed operational panels.",
+      status: "Queued",
+      tone: "blue",
+    },
+    {
+      code: "NX-03",
+      title: "C-7-4 Protocol Droid Memory Layer",
+      priority: "Medium",
+      detail:
+        "Improve private assistant knowledge, memory, and local retrieval capabilities.",
+      status: "Queued",
+      tone: "green",
+    },
+    {
+      code: "NX-04",
+      title: "Restore Drill",
+      priority: "Low",
+      detail:
+        "Perform a controlled restore test for one backup category to validate the recovery process.",
+      status: "Planned",
+      tone: "amber",
+    },
+  ],
+};
+
 export const featuredProjects = [
   {
     title: "Home Tracker",

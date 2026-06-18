@@ -2705,3 +2705,237 @@ h1 {
     flex-direction: column;
   }
 }
+
+/*------- Next Objectives -------*/
+.next-objectives-section {
+  padding: clamp(1.75rem, 3vw, 2.5rem) 2rem;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(121, 231, 242, 0.055), transparent 28rem),
+    radial-gradient(circle at 85% 60%, rgba(255, 183, 77, 0.055), transparent 30rem),
+    rgba(8, 10, 13, 0.78);
+}
+
+.next-objectives-shell {
+  position: relative;
+  overflow: hidden;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  background:
+    linear-gradient(145deg, rgba(121, 231, 242, 0.055), transparent 36%),
+    radial-gradient(circle at top right, rgba(255, 183, 77, 0.055), transparent 42%),
+    var(--panel);
+  border: 1px solid rgba(121, 231, 242, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.next-objectives-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.next-objectives-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.15rem;
+}
+
+.next-objectives-header p {
+  margin: 0 0 0.35rem;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.next-objectives-header h3 {
+  margin: 0;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+.next-objectives-header span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+.next-objectives-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.next-objective-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 230px;
+  background: rgba(5, 7, 10, 0.58);
+  border: 1px solid rgba(121, 231, 242, 0.16);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.next-objective-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 16px 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(121, 231, 242, 0.55), transparent);
+  opacity: 0.75;
+}
+
+.next-objective-card.green::after {
+  background: linear-gradient(90deg, transparent, rgba(111, 227, 143, 0.58), transparent);
+}
+
+.next-objective-card.amber::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 183, 77, 0.62), transparent);
+}
+
+.next-objective-code {
+  padding: 0.65rem 0.85rem;
+  color: var(--cyan);
+  background: rgba(121, 231, 242, 0.07);
+  border-bottom: 1px solid rgba(121, 231, 242, 0.16);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  font-weight: 900;
+}
+
+.next-objective-card.green .next-objective-code {
+  color: var(--green);
+  background: rgba(111, 227, 143, 0.07);
+  border-bottom-color: rgba(111, 227, 143, 0.16);
+}
+
+.next-objective-card.amber .next-objective-code {
+  color: var(--amber);
+  background: rgba(255, 183, 77, 0.07);
+  border-bottom-color: rgba(255, 183, 77, 0.16);
+}
+
+.next-objective-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.next-objective-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.next-objective-topline h3 {
+  margin: 0;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.next-objective-topline span {
+  flex: 0 0 auto;
+  padding: 0.26rem 0.55rem;
+  color: var(--cyan);
+  background: rgba(121, 231, 242, 0.07);
+  border: 1px solid rgba(121, 231, 242, 0.22);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.56rem;
+  font-weight: 900;
+}
+
+.next-objective-card.green .next-objective-topline span {
+  color: var(--green);
+  background: rgba(111, 227, 143, 0.07);
+  border-color: rgba(111, 227, 143, 0.22);
+}
+
+.next-objective-card.amber .next-objective-topline span {
+  color: var(--amber);
+  background: rgba(255, 183, 77, 0.07);
+  border-color: rgba(255, 183, 77, 0.24);
+}
+
+.next-objective-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.86rem;
+}
+
+.next-objective-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.next-objective-footer span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.58rem;
+  font-weight: 900;
+}
+
+.next-objective-footer strong {
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+}
+
+.next-objective-card.green .next-objective-footer strong {
+  color: var(--green);
+}
+
+.next-objective-card.blue .next-objective-footer strong {
+  color: var(--cyan);
+}
+
+@media (max-width: 1100px) {
+  .next-objectives-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .next-objectives-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .next-objectives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .next-objective-card {
+    min-height: auto;
+  }
+}
