@@ -411,8 +411,8 @@ export default function App() {
           <StatusPanel
             icon="◆"
             title="Private Systems"
-            dots={["green", "green", "red", "red", "amber"]}
-            detail="Monitoring Active · Alerts Enabled"
+            dots={["green", "green", "green", "red", "amber"]}
+            detail="Monitoring · Protocol Droid Active"
           />
 
           <StatusPanel

@@ -30,7 +30,7 @@ export const featuredProjects = [
     linkLabel: "View Portal",
   },
   {
-    title: "C-7-4 Core",
+    title: "C-7-4 Protocol Droid",
     status: "In Development",
     description:
       "A private assistant project focused on local AI, automation, memory, voice interaction, and homelab integration.",
@@ -116,10 +116,10 @@ export const routeMatrix = [
   },
   {
     domain: "c74.jorgesotocoder.com",
-    service: "C-7-4 Assistant Interface",
+    service: "C-7-4 Protocol Droid",
     access: "Restricted",
-    status: "Planned",
-    method: "Access Gate Planned",
+    status: "Private Active",
+    method: "Tailscale-only Open WebUI",
   },
   {
     domain: "ha.jorgesotocoder.com",
@@ -206,10 +206,10 @@ export const activationQueue = [
   },
   {
     order: "02",
-    title: "C-7-4 Core",
-    route: "c74.jorgesotocoder.com",
-    priority: "Second",
-    detail: "Prepare private access for the AI assistant interface after the access gate is selected.",
+    title: "C-7-4 Protocol Droid",
+    route: "Private Tailscale assistant interface",
+    priority: "Active",
+    detail: "Open WebUI and Ollama are online through Tailscale, monitored by Uptime Kuma, and not publicly exposed.",
   },
   {
     order: "03",
