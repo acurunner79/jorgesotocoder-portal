@@ -18,6 +18,71 @@ export const commandTicker = {
     "SYSTEMS NOMINAL · PRIVATE ROUTES SECURED · BACKUPS VERIFIED · C-7-4 PROTOCOL DROID ONLINE · HOME ASSISTANT PRIVATE ACTIVE · THE ROCK STANDING BY",
 };
 
+export const missionLog = {
+  eyebrow: "Operations Archive",
+  title: "Mission Log",
+  subtitle:
+    "Recent command operations completed across the portal, private systems, monitoring, and recovery layers.",
+  entries: [
+    {
+      code: "OP-01",
+      title: "Command Portal Activated",
+      status: "Complete",
+      detail:
+        "Public command portal deployed with application directory, themed navigation, and responsive layout.",
+      tags: ["Portal", "Public", "Live"],
+    },
+    {
+      code: "OP-02",
+      title: "Protected Monitoring Online",
+      status: "Complete",
+      detail:
+        "Private monitoring layer activated with service checks, email alerts, and private status visibility.",
+      tags: ["Monitoring", "Private", "Alerts"],
+    },
+    {
+      code: "OP-03",
+      title: "C-7-4 Protocol Droid Activated",
+      status: "Complete",
+      detail:
+        "Private assistant interface brought online with Open WebUI, Ollama, monitoring, and protected access.",
+      tags: ["AI", "Tailnet", "Private Active"],
+    },
+    {
+      code: "OP-04",
+      title: "Home Assistant Secured",
+      status: "Complete",
+      detail:
+        "Smart home command center moved into the protected access model and added to monitoring.",
+      tags: ["Home Assistant", "Tailnet", "Smart Home"],
+    },
+    {
+      code: "OP-05",
+      title: "Recovery Layer Established",
+      status: "Complete",
+      detail:
+        "Home Assistant backups, Docker appdata backups, database dumps, flash backup, and restore runbooks were established.",
+      tags: ["Backups", "Runbooks", "Recovery"],
+    },
+    {
+      code: "OP-06",
+      title: "Command Interface Enhanced",
+      status: "Complete",
+      detail:
+        "Aurebesh command ticker and Portal System Index added to strengthen the command-center experience.",
+      tags: ["UI", "Aurebesh", "System Index"],
+    },
+    {
+      code: "OP-07",
+      title: "Second-Copy Backup Deferred",
+      status: "Pending",
+      detail:
+        "External/off-server backup copy is planned once a suitable backup drive is available.",
+      tags: ["Backup", "Deferred", "Amber"],
+    },
+  ],
+};
+
 export const featuredProjects = [
   {
     title: "Home Tracker",

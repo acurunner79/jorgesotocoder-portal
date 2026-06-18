@@ -2191,6 +2191,7 @@ h1 {
   }
 }
 
+/*------- Portal System Index -------*/
 .portal-system-index {
   padding: clamp(1.75rem, 3vw, 2.5rem) 2rem;
   background:
@@ -2498,5 +2499,209 @@ h1 {
   .system-index-status,
   .system-index-shield {
     justify-self: start;
+  }
+}
+
+/*------- Mission Log -------*/
+.mission-log-section {
+  padding: clamp(1.75rem, 3vw, 2.5rem) 2rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 183, 77, 0.06), transparent 28rem),
+    radial-gradient(circle at 85% 50%, rgba(121, 231, 242, 0.045), transparent 30rem),
+    rgba(8, 10, 13, 0.78);
+}
+
+.mission-log-shell {
+  position: relative;
+  overflow: hidden;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  background:
+    linear-gradient(145deg, rgba(255, 183, 77, 0.07), transparent 34%),
+    radial-gradient(circle at top right, rgba(121, 231, 242, 0.045), transparent 42%),
+    var(--panel);
+  border: 1px solid rgba(255, 183, 77, 0.22);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.mission-log-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.mission-log-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.15rem;
+}
+
+.mission-log-header p {
+  margin: 0 0 0.35rem;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.mission-log-header h3 {
+  margin: 0;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+.mission-log-header span {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+.mission-log-timeline {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mission-log-entry {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.mission-log-marker {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  background: rgba(5, 7, 10, 0.6);
+  border: 1px solid rgba(255, 183, 77, 0.2);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.mission-log-marker span {
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-shadow: 0 0 14px rgba(255, 183, 77, 0.35);
+}
+
+.mission-log-content {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  background: rgba(5, 7, 10, 0.58);
+  border: 1px solid rgba(255, 183, 77, 0.16);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.mission-log-content::after {
+  content: "";
+  position: absolute;
+  inset: auto 16px 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(111, 227, 143, 0.5), transparent);
+  opacity: 0.7;
+}
+
+.mission-log-entry.pending .mission-log-content::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 183, 77, 0.6), transparent);
+}
+
+.mission-log-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.mission-log-topline h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mission-log-topline span {
+  flex: 0 0 auto;
+  padding: 0.28rem 0.6rem;
+  color: var(--green);
+  background: rgba(111, 227, 143, 0.08);
+  border: 1px solid rgba(111, 227, 143, 0.25);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.mission-log-entry.pending .mission-log-topline span {
+  color: var(--amber);
+  background: rgba(255, 183, 77, 0.08);
+  border-color: rgba(255, 183, 77, 0.28);
+}
+
+.mission-log-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 0.88rem;
+}
+
+.mission-log-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.mission-log-tags span {
+  padding: 0.24rem 0.55rem;
+  color: var(--cyan);
+  background: rgba(121, 231, 242, 0.07);
+  border: 1px solid rgba(121, 231, 242, 0.2);
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.58rem;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .mission-log-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .mission-log-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-log-marker {
+    min-height: auto;
+    justify-content: start;
+    padding: 0.65rem 0.85rem;
+  }
+
+  .mission-log-topline {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

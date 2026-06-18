@@ -13,6 +13,7 @@ import {
   securityDirectives,
   commandTicker,
   portalSystemIndex,
+  missionLog,
 } from "./data/site";
 
 function AppCard({ app }) {
@@ -89,6 +90,57 @@ function ContactCard({ item }) {
       <span>{item.label}</span>
       <strong>{item.value}</strong>
     </a>
+  );
+}
+
+function MissionLogEntry({ entry }) {
+  return (
+    <article className={`mission-log-entry ${entry.status.toLowerCase()}`}>
+      <div className="mission-log-marker">
+        <span>{entry.code}</span>
+      </div>
+
+      <div className="mission-log-content">
+        <div className="mission-log-topline">
+          <h3>{entry.title}</h3>
+          <span>{entry.status}</span>
+        </div>
+
+        <p>{entry.detail}</p>
+
+        <div className="mission-log-tags">
+          {entry.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function MissionLog({ log }) {
+  return (
+    <section className="mission-log-section">
+      <div className="section-heading">
+        <span />
+        <h2>{log.title}</h2>
+        <span />
+      </div>
+
+      <div className="mission-log-shell">
+        <div className="mission-log-header">
+          <p>{log.eyebrow}</p>
+          <h3>{log.title}</h3>
+          <span>{log.subtitle}</span>
+        </div>
+
+        <div className="mission-log-timeline">
+          {log.entries.map((entry) => (
+            <MissionLogEntry key={entry.code} entry={entry} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -404,6 +456,8 @@ export default function App() {
           ))}
         </div>
       </section>
+
+      <MissionLog log={missionLog} />
 
       <section className="directory-section" id="apps">
         <div className="section-heading">
